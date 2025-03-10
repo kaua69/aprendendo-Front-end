@@ -7,6 +7,119 @@
 </head>
 <body>
 
+    <form >
+
+        <label for="nome">coloque seu nome</label> <br>
+        <input type="text" name="nome" placeholder="digite seu nome">
+        <br>
+        <br>
+
+        <label for="email">inserir senha</label> <br>
+        <input type="email" name="email" placeholder="digite seu email">
+        <br><br>
+
+        <label for="senha">inserir senha</label> <br>
+        <input type="password" name="senha" placeholder="digite sua senha">
+        <br><br>
+
+        <label for="nivel">
+            <input type="radio" name="nivel" value="iniciante">iniciante
+        </label>
+
+        <label for="nivel">
+            <input type="radio" name="nivel" value="medio">medio
+        </label>
+
+        <label for="nivel">
+            <input type="radio" name="nivel" value="avançado">avançado
+        </label>
+        <br><br>
+
+        <!-- tipo de select para selecionar itens --> 
+
+        <label for="escolaridade"><strong>Sua escolaridade</strong></label>
+           <select name="escolaridade" required>
+            <option selected disabled value value="">selecionar</option>
+            <option>ensino fundamental</option>
+            <option>ensino medio</option>
+            <option>ensino superior</option>
+            <option>pos graduação</option>
+            </select>
+            <br><br>
+        <!-- tag check box -->
+
+        <label>
+            <strong>selecione as tecnologias que você conhece</strong>
+        </label> <br><br>
+
+        <input type="checkbox" name="tecnologias1" id="tecnologias1">
+        <label for="tecnologias">html</label> <br>
+
+        <input type="checkbox" name="tecnologias2" id="tecnologias2">
+        <label for="tecnologias2">css</label><br>
+
+        <input type="checkbox" name="tecnologias3" id="tecnologias3">
+        <label for="tecnologias3">javascript</label><br><br>
+
+        <input type="submit" value="enviar">
+
+    </form>
+
+    <br><br>
+
+    <form action="/upload-arquivo" method="post" enctype="multipart/form-data">
+        <label for="arquivo">escolha um arquivo</label><br>
+        <input type="file" name="arquivo" id="arquivo" required><br><br>
+
+        <!-- formulario com data -->
+        <label for="nascimento" >Data de nascimento</label><br>
+        <input type="date" name="nascimento" id="nascimento">
+
+        <!-- formulario de agrupamento -->
+
+        <form action="/processar_formulario" method="post">
+            <fieldset>
+                <legend>dados pessoais</legend>
+
+                <label for="nome">digite seu nome</label><br>
+                <input type="text" name="nome" id="nome" placeholder="nome" required><br>
+
+                <label for="email">digite seu email</label><br>
+                <input type="email" name="email" id="email" placeholder="email" required><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>dados de endereço</legend>
+
+                <label for="endereço">digite seu endereço</label><br>
+                <input type="text" name="endereço" id="endereço" placeholder="endereço" required><br>
+
+                <label for="cidade">digite sua cidade</label><br>
+                <input type="text" name="cidade" id="cidade" placeholder="cidade" required><br>
+
+                <label for="estado">digite seu estado</label><br>
+                <input type="text" name="estado" id="estado" placeholder="estado" required><br>
+            </fieldset>
+        </form>
+
+        <!-- limitação de caracter -->
+
+        <form >
+
+            <h1>formulario de limitação de caracter</h1>
+            <label for="mensagem">Mensagem (limitada a 100 caracter)</label> <br>
+            <textarea name="mensagem" id="mensagem" rows="4" cols="50" maxlength="100">
+                <!-- 
+                Rows = quantidade de linhas
+                cols = quantidade de colunas
+                maxlength = quantidade de caracter permitido
+                -->
+            </textarea>
+
+        </form>
+
+    </form>
+
     
 
 </body>
